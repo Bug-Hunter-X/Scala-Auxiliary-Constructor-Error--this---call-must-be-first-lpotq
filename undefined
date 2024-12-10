@@ -1,0 +1,13 @@
+```scala
+class MyClass(val x: Int) {
+  def this() = { this(0) } // Correct placement of this()
+  def myMethod(): Int = x + 1
+}
+
+object Main extends App {
+  val obj = new MyClass()
+  println(obj.myMethod()) // Output: 1
+  val obj2 = new MyClass(5)
+  println(obj2.myMethod()) // Output: 6
+}
+```
